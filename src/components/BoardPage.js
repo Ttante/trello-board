@@ -40,6 +40,7 @@ export default class BoardPage extends React.Component {
   updateColumns(currColumn, targetColumn, task, data) {
     console.log('task: ', task)
     const { columnData, nextTaskId } = this.state
+    console.log('targetColumn: ', targetColumn)
     const updatedTargetTasks = [...columnData[targetColumn].tasks, task.id ? task : {...task, id: nextTaskId}]
     if (!task.id) { this.setState({ nextTaskId: nextTaskId + 1 }) }
 

@@ -4,12 +4,19 @@ import './Card.css'
 
 const buttonColors = ['#49a7f6', '#00d1bd', '#7f50ff', '#ff50b6']
 
+const columnMap = {
+  'Backlog': 'backlog',
+  'In Progress': 'in-progress',
+  'Completed': 'completed'
+}
+
 export default class Card extends React.Component {
   moveCard(evt, targetColumnName) {
     const { columnName, task, updateColumns } = this.props
-
-
-    updateColumns(columnName, targetColumnName, task, {})
+    console.log('columnMap: ', columnMap)
+    console.log('targetColumnName: ', targetColumnName)
+    
+    updateColumns(columnName, columnMap[targetColumnName], task, {})
   }
 
   renderButton(buttonColumnName, index) {
