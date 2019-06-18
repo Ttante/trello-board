@@ -1,0 +1,57 @@
+.column {
+  background: #fff;
+  border-radius: 20px;
+  display: inline-block;
+  margin-right: 1em;
+  min-height: 100px;
+  padding-bottom: 50px;
+  position: relative;
+  vertical-align: top;
+  width: 250px;
+}
+
+.column:last-of-type {
+  margin-right: 0;
+}
+
+.create-button {
+  color: #fff;
+  height: 30px;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  border-bottom-right-radius: 20px;
+  border-bottom-left-radius: 20px;
+}
+
+.create-button:hover {
+  cursor: pointer;
+}
+
+.overlay {
+  background: rgba(181, 181, 181, 0.3);
+  height: 100vh;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 100vw;
+  z-index: 10;
+}
+
+.overlay .button-wrap {
+  margin-right: 3em;
+  margin-top: 3em;
+  text-align: right;
+}
+
+.overlay .create-task-form {
+  background: #fff;
+  height: 300px;
+  left: 50%;
+  padding-top: 3em;
+  position: absolute;
+  transform: translate(-50%, -50%);
+  top: 50%;
+  width: 450px;
+}

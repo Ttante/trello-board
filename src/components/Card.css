@@ -1,0 +1,21 @@
+.card {
+  box-shadow: 0px 0px 1px #c2c2c2;
+  display: inline-block;
+  margin: 20px auto 0 auto;
+  min-height: 150px;
+  width: 100%;
+}
+
+.card-wrapper {
+  margin-left: 5%;
+  width: 90%;
+}
+
+.card-wrapper button {
+  color: #fff;
+  padding: 10px 0;
+}
+
+.card-wrapper button:hover {
+  cursor: pointer;
+}
