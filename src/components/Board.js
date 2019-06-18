@@ -5,14 +5,6 @@ import Column from './Column'
 import './Board.css'
 
 export default class Board extends React.Component {
-  constructor(props) {
-    super(props)
-
-    this.state = {
-      test: 'hey'
-    }
-  }
-
   render() {
     const { columns, updateColumns } = this.props
 

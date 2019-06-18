@@ -38,9 +38,7 @@ export default class BoardPage extends React.Component {
   }
 
   updateColumns(currColumn, targetColumn, task, data) {
-    console.log('task: ', task)
     const { columnData, nextTaskId } = this.state
-    console.log('targetColumn: ', targetColumn)
     const updatedTargetTasks = [...columnData[targetColumn].tasks, task.id ? task : {...task, id: nextTaskId}]
     if (!task.id) { this.setState({ nextTaskId: nextTaskId + 1 }) }
 
@@ -63,14 +61,6 @@ export default class BoardPage extends React.Component {
       })
     } else {
       // create tasks
-      console.log('updateObject: ', {
-        ...this.state.columnData,
-        [targetColumn]: {
-          ...this.state.columnData[targetColumn],
-          tasks: updatedTargetTasks
-        }
-      })
-
       this.setState({
         columnData: {
           ...this.state.columnData,
@@ -84,14 +74,10 @@ export default class BoardPage extends React.Component {
   }
 
   render() {
-    const { columnData } = this.state
-
-    console.log('this.state: ', this.state)
-
     return (
       <div className="board-page">
         <Board
-          columns={columnData}
+          columns={this.state.columnData}
           updateColumns={this.updateColumns.bind(this)}
         />
       </div>

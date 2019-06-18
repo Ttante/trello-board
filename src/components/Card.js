@@ -13,16 +13,12 @@ const columnMap = {
 export default class Card extends React.Component {
   moveCard(evt, targetColumnName) {
     const { columnName, task, updateColumns } = this.props
-    console.log('columnMap: ', columnMap)
-    console.log('targetColumnName: ', targetColumnName)
-    
     updateColumns(columnName, columnMap[targetColumnName], task, {})
   }
 
   renderButton(buttonColumnName, index) {
     const { otherColumns } = this.props
     
-    console.log('buttonColumnName: ', buttonColumnName)
     return (
       <button 
         onClick={(e) => this.moveCard(e, buttonColumnName)}
@@ -40,8 +36,6 @@ export default class Card extends React.Component {
   render() {
     const { otherColumns, task } = this.props
     const { description, deadline, title } = task
-
-    console.log('otherColumns: ', otherColumns)
 
     return (
       <div className="card-wrapper">
